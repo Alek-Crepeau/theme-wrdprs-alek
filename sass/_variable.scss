@@ -1,7 +1,12 @@
 :root {
   --couleur-arriere-entete: #618aad;
-  --couleur-arriere-acceuil: #0f0;
+  --couleur-arriere-acceuil: rgb(183, 104, 0);
   --couleur-arriere-evenement: #045;
-  --couleur-arriere-galerie: #045;
+  --couleur-arriere-galerie: #680a7f;
   --couleur-arriere-footer: #630;
+
+  --couleur-txt-titre: rgba(0, 0, 0, 0.4);
+  --couleur-txt: rgba(255, 255, 255, 0.8);
+
+  --transparence-section: 0.1;
 }

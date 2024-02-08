@@ -13,10 +13,13 @@ Text Domain: theme alek
 */
 :root {
   --couleur-arriere-entete: #618aad;
-  --couleur-arriere-acceuil: #0f0;
+  --couleur-arriere-acceuil: rgb(183, 104, 0);
   --couleur-arriere-evenement: #045;
-  --couleur-arriere-galerie: #045;
+  --couleur-arriere-galerie: #680a7f;
   --couleur-arriere-footer: #630;
+  --couleur-txt-titre: rgba(0, 0, 0, 0.4);
+  --couleur-txt: rgba(255, 255, 255, 0.8);
+  --transparence-section: 0.1;
 }
 
 * {
@@ -27,19 +30,39 @@ Text Domain: theme alek
 body {
   display: flex;
   flex-direction: column;
+  font-family: "protest riot";
 }
 
 .global {
-  min-height: 40vh;
   display: flex;
   justify-content: center;
+  text-align: center;
+}
+
+#acceuil,
+#evenement,
+#galerie {
+  min-height: 40vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0, 1, 1100px;
-  border: 1px solid black;
+  min-width: 70vw;
+  flex: 0, 1, 900px;
+  padding: 3rem 1rem;
+  background-color: rgba(103, 184, 255, var(--transparence-section));
+}
+
+#entete,
+#footer {
+  min-height: 20vh;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 #entete {
@@ -63,14 +86,22 @@ body {
 }
 
 h1 {
-  font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
-  font-family: "protest riot";
+  font-size: clamp(0.75rem, 0.558rem + 1.923vw, 2rem);
+  color: var(--couleur-txt-titre);
   font-style: normal;
   font-weight: 600;
 }
 
 h2 {
-  font-family: "protest riot";
+  font-size: clamp(0.8rem, 0.615rem + 1.385vw, 2rem);
+  color: var(--couleur-txt-titre);
   font-style: normal;
   font-weight: 500;
+}
+
+h3 {
+  font-size: clamp(0.833rem, 0.705rem + 0.769vw, 1.667rem);
+  color: var(--couleur-txt);
+  font-style: normal;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */

@@ -6,19 +6,39 @@
 body {
   display: flex;
   flex-direction: column;
+  font-family: "protest riot";
 }
 
 .global {
-  min-height: 40vh;
   display: flex;
   justify-content: center;
+  text-align: center;
+}
+
+#acceuil,
+#evenement,
+#galerie {
+  min-height: 40vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0, 1, 1100px;
-  border: 1px solid black;
+  min-width: 70vw;
+  flex: 0, 1, 900px;
+  padding: 3rem 1rem;
+  background-color: rgba(103, 184, 255, var(--transparence-section));
+}
+
+#entete,
+#footer {
+  min-height: 20vh;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 #entete {

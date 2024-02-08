@@ -1,19 +1,24 @@
 // https://chrisburnell.com/clamp-calculator/
 
 h1 {
-  font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
-  font-family: "protest riot";
+  font-size: clamp(0.75rem, 0.558rem + 1.923vw, 2rem);
+  color: var(--couleur-txt-titre);
   font-style: normal;
   font-weight: 600;
 }
 
 h2 {
-  font-family: "protest riot";
+  font-size: clamp(0.8rem, 0.615rem + 1.385vw, 2rem);
+  color: var(--couleur-txt-titre);
   font-style: normal;
   font-weight: 500;
 }
 
 h3 {
+  font-size: clamp(0.833rem, 0.705rem + 0.769vw, 1.667rem);
+  color: var(--couleur-txt);
+  font-style: normal;
+  font-weight: 400;
 }
 
 h4 {
