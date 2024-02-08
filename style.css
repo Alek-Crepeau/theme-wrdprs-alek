@@ -30,7 +30,9 @@ body {
 }
 
 .global {
-  min-height: 100vh;
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
 }
 
 .global > section,
@@ -62,4 +64,13 @@ body {
 
 h1 {
   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
+  font-family: "protest riot";
+  font-style: normal;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: "protest riot";
+  font-style: normal;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
