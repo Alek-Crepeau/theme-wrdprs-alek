@@ -1,10 +1,49 @@
 :root {
-  --couleur-arriere-entete: #618aad;
-  --couleur-arriere-acceuil: rgb(183, 104, 0);
-  --couleur-arriere-evenement: #045;
-  --couleur-arriere-galerie: #680a7f;
-  --couleur-arriere-footer: #630;
+  // --couleur-arriere-entete: #618aad;
+  // --couleur-arriere-acceuil: rgb(183, 104, 0);
+  // --couleur-arriere-evenement: #045;
+  // --couleur-arriere-galerie: #680a7f;
+  // --couleur-arriere-footer: #630;
 
+  // --couleur-txt-titre: rgba(0, 0, 0, 0.4);
+  // --couleur-txt: rgba(255, 255, 255, 0.8);
+
+  // --transparence-section: 0.1;
+
+  // calcul des teintes
+  --u1: 180; //couleur initiale
+  --u2: calc(var(--u1) + 20); //couleur complementaire
+  --u3: calc(var(--u2) + 20); //couleur analogue gauche
+  --u4: calc(var(--u3) + 20); //couleur analogue droite
+  --u5: calc(var(--u4) + 20);
+
+  // saturation
+  --s-arriere: 80%;
+  --s-avant: 100%;
+
+  // luminosité
+  --l-arriere: 40%;
+  --l-avant: 60%;
+
+  // couleur arrière plan
+  --couleur-arriere-entete: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-acceuil: hsl(var(--u2), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-evenement: hsl(
+    var(--u3),
+    var(--s-arriere),
+    var(--l-arriere)
+  );
+  --couleur-arriere-galerie: hsl(var(--u4), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-footer: hsl(var(--u5), var(--s-arriere), var(--l-arriere));
+
+  // couleur avant plan
+  --couleur-avant-entete: hsl(var(--u1), var(--s-avant), var(--l-avant));
+  --couleur-avant-acceuil: hsl(var(--u2), var(--s-avant), var(--l-avant));
+  --couleur-avant-evenement: hsl(var(--u3), var(--s-avant), var(--l-avant));
+  --couleur-avant-galerie: hsl(var(--u4), var(--s-avant), var(--l-avant));
+  --couleur-avant-footer: hsl(var(--u5), var(--s-avant), var(--l-avant));
+
+  // txt
   --couleur-txt-titre: rgba(0, 0, 0, 0.4);
   --couleur-txt: rgba(255, 255, 255, 0.8);
 

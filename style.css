@@ -12,11 +12,29 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme alek
 */
 :root {
-  --couleur-arriere-entete: #618aad;
-  --couleur-arriere-acceuil: rgb(183, 104, 0);
-  --couleur-arriere-evenement: #045;
-  --couleur-arriere-galerie: #680a7f;
-  --couleur-arriere-footer: #630;
+  --u1: 180;
+  --u2: calc(var(--u1) + 20);
+  --u3: calc(var(--u2) + 20);
+  --u4: calc(var(--u3) + 20);
+  --u5: calc(var(--u4) + 20);
+  --s-arriere: 80%;
+  --s-avant: 100%;
+  --l-arriere: 40%;
+  --l-avant: 60%;
+  --couleur-arriere-entete: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-acceuil: hsl(var(--u2), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-evenement: hsl(
+    var(--u3),
+    var(--s-arriere),
+    var(--l-arriere)
+  );
+  --couleur-arriere-galerie: hsl(var(--u4), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-footer: hsl(var(--u5), var(--s-arriere), var(--l-arriere));
+  --couleur-avant-entete: hsl(var(--u1), var(--s-avant), var(--l-avant));
+  --couleur-avant-acceuil: hsl(var(--u2), var(--s-avant), var(--l-avant));
+  --couleur-avant-evenement: hsl(var(--u3), var(--s-avant), var(--l-avant));
+  --couleur-avant-galerie: hsl(var(--u4), var(--s-avant), var(--l-avant));
+  --couleur-avant-footer: hsl(var(--u5), var(--s-avant), var(--l-avant));
   --couleur-txt-titre: rgba(0, 0, 0, 0.4);
   --couleur-txt: rgba(255, 255, 255, 0.8);
   --transparence-section: 0.1;
@@ -51,7 +69,6 @@ body {
   min-width: 70vw;
   flex: 0, 1, 900px;
   padding: 3rem 1rem;
-  background-color: rgba(103, 184, 255, var(--transparence-section));
 }
 
 #entete,
@@ -67,41 +84,66 @@ footer {
 
 #entete {
   background-color: var(--couleur-arriere-entete);
+  color: var(--couleur-avant-entete);
+  position: relative;
 }
 
 #acceuil {
   background-color: var(--couleur-arriere-acceuil);
+  color: var(--couleur-avant-acceuil);
+  position: relative;
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
+  color: var(--couleur-avant-evenement);
 }
 
 #galerie {
   background-color: var(--couleur-arriere-galerie);
+  color: var(--couleur-avant-galerie);
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
+  color: var(--couleur-avant-footer);
 }
 
 h1 {
   font-size: clamp(0.75rem, 0.558rem + 1.923vw, 2rem);
-  color: var(--couleur-txt-titre);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 h2 {
   font-size: clamp(0.8rem, 0.615rem + 1.385vw, 2rem);
-  color: var(--couleur-txt-titre);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 h3 {
   font-size: clamp(0.833rem, 0.705rem + 0.769vw, 1.667rem);
-  color: var(--couleur-txt);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
+}
+
+.vague {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+
+.vague .shape-fill {
+  fill: var(--couleur-arriere-acceuil);
 }/*# sourceMappingURL=style.css.map */

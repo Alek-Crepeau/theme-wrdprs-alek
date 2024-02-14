@@ -27,7 +27,7 @@ body {
   min-width: 70vw;
   flex: 0, 1, 900px;
   padding: 3rem 1rem;
-  background-color: rgba(103, 184, 255, var(--transparence-section));
+  //background-color: rgba(103, 184, 255, var(--transparence-section));
 }
 
 #entete,
@@ -43,20 +43,27 @@ footer {
 
 #entete {
   background-color: var(--couleur-arriere-entete);
+  color: var(--couleur-avant-entete);
+  position: relative;
 }
 
 #acceuil {
   background-color: var(--couleur-arriere-acceuil);
+  color: var(--couleur-avant-acceuil);
+  position: relative;
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
+  color: var(--couleur-avant-evenement);
 }
 
 #galerie {
   background-color: var(--couleur-arriere-galerie);
+  color: var(--couleur-avant-galerie);
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
+  color: var(--couleur-avant-footer);
 }
