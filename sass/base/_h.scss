@@ -22,6 +22,9 @@ h3 {
 }
 
 h4 {
+  font-size: clamp(1rem, 0.818rem + 0.455vw, 1.5rem);
+  font-style: normal;
+  font-weight: 300;
 }
 
 h5 {

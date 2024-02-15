@@ -1,0 +1,18 @@
+.diagonale {
+  position: relative;
+  isolation: isolate;
+  z-index: 3;
+}
+
+.diagonale::after {
+  position: absolute;
+  content: "";
+  min-height: 40vh;
+  top: -10vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--couleur-arriere-evenement);
+  transform: skewY(-5deg);
+  z-index: -1;
+}

@@ -21,20 +21,16 @@ Text Domain: theme alek
   --s-avant: 100%;
   --l-arriere: 40%;
   --l-avant: 60%;
-  --couleur-arriere-entete: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-acceuil: hsl(var(--u2), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-evenement: hsl(
-    var(--u3),
-    var(--s-arriere),
-    var(--l-arriere)
-  );
-  --couleur-arriere-galerie: hsl(var(--u4), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-footer: hsl(var(--u5), var(--s-arriere), var(--l-arriere));
-  --couleur-avant-entete: hsl(var(--u1), var(--s-avant), var(--l-avant));
-  --couleur-avant-acceuil: hsl(var(--u2), var(--s-avant), var(--l-avant));
-  --couleur-avant-evenement: hsl(var(--u3), var(--s-avant), var(--l-avant));
-  --couleur-avant-galerie: hsl(var(--u4), var(--s-avant), var(--l-avant));
-  --couleur-avant-footer: hsl(var(--u5), var(--s-avant), var(--l-avant));
+  --couleur-arriere-entete: hsl(var(--u1), 100%, 40%);
+  --couleur-arriere-acceuil: hsl(var(--u1), 100%, 35%);
+  --couleur-arriere-evenement: hsl(var(--u1), 100%, 30%);
+  --couleur-arriere-galerie: hsl(var(--u1), 100%, 25%);
+  --couleur-arriere-footer: hsl(var(--u1), 100%, 20%);
+  --couleur-avant-entete: hsl(var(--u1), 100%, 15%);
+  --couleur-avant-acceuil: hsl(var(--u1), 100%, 15%);
+  --couleur-avant-evenement: hsl(var(--u1), 100%, 70%);
+  --couleur-avant-galerie: hsl(var(--u1), 100%, 70%);
+  --couleur-avant-footer: hsl(var(--u1), 100%, 70%);
   --couleur-txt-titre: rgba(0, 0, 0, 0.4);
   --couleur-txt: rgba(255, 255, 255, 0.8);
   --transparence-section: 0.1;
@@ -58,9 +54,8 @@ body {
 }
 
 #acceuil,
-#evenement,
 #galerie {
-  min-height: 40vh;
+  min-height: 50vh;
 }
 
 .global > section,
@@ -86,12 +81,52 @@ footer {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-avant-entete);
   position: relative;
+  padding-bottom: 5vh;
+}
+
+#entete header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#entete header div {
+  min-width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#entete header div a {
+  text-decoration: none;
+  color: black;
+}
+
+#entete header div h3 {
+  background-color: crimson;
+  padding: 5px;
+  border-radius: 10px 10px 10px 10px;
+  transition: transform 0.5s;
+}
+
+#entete header div h3:hover {
+  transform: scale(1.3);
 }
 
 #acceuil {
   background-color: var(--couleur-arriere-acceuil);
   color: var(--couleur-avant-acceuil);
   position: relative;
+  padding-bottom: 5vh;
+}
+
+#acceuil section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #evenement {
@@ -99,9 +134,27 @@ footer {
   color: var(--couleur-avant-evenement);
 }
 
+.h2 {
+  position: relative;
+  top: -10vh;
+}
+
 #galerie {
   background-color: var(--couleur-arriere-galerie);
   color: var(--couleur-avant-galerie);
+  padding-top: 15vh;
+  position: relative;
+}
+
+#galerie section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#galerie img {
+  scale: 0.3;
 }
 
 #footer {
@@ -127,6 +180,12 @@ h3 {
   font-weight: 300;
 }
 
+h4 {
+  font-size: clamp(1rem, 0.818rem + 0.455vw, 1.5rem);
+  font-style: normal;
+  font-weight: 300;
+}
+
 .vague {
   position: absolute;
   bottom: 0;
@@ -146,4 +205,44 @@ h3 {
 
 .vague .shape-fill {
   fill: var(--couleur-arriere-acceuil);
+}
+
+.diagonale {
+  position: relative;
+  isolation: isolate;
+  z-index: 3;
+}
+
+.diagonale::after {
+  position: absolute;
+  content: "";
+  min-height: 40vh;
+  top: -10vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--couleur-arriere-evenement);
+  transform: skewY(-5deg);
+  z-index: -1;
+}
+
+.livre {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.livre svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.livre .shape-fill {
+  fill: var(--couleur-arriere-footer);
 }/*# sourceMappingURL=style.css.map */

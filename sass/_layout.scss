@@ -16,9 +16,8 @@ body {
 }
 
 #acceuil,
-#evenement,
 #galerie {
-  min-height: 40vh;
+  min-height: 50vh;
 }
 
 .global > section,
@@ -45,12 +44,52 @@ footer {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-avant-entete);
   position: relative;
+  padding-bottom: 5vh;
+}
+
+#entete header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#entete header div {
+  min-width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#entete header div a {
+  text-decoration: none;
+  color: black;
+}
+
+#entete header div h3 {
+  background-color: crimson;
+  padding: 5px;
+  border-radius: 10px 10px 10px 10px;
+  transition: transform 0.5s;
+}
+
+#entete header div h3:hover {
+  transform: scale(1.3);
 }
 
 #acceuil {
   background-color: var(--couleur-arriere-acceuil);
   color: var(--couleur-avant-acceuil);
   position: relative;
+  padding-bottom: 5vh;
+}
+
+#acceuil section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #evenement {
@@ -58,9 +97,27 @@ footer {
   color: var(--couleur-avant-evenement);
 }
 
+.h2 {
+  position: relative;
+  top: -10vh;
+}
+
 #galerie {
   background-color: var(--couleur-arriere-galerie);
   color: var(--couleur-avant-galerie);
+  padding-top: 15vh;
+  position: relative;
+}
+
+#galerie section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#galerie img {
+  scale: 0.3;
 }
 
 #footer {
