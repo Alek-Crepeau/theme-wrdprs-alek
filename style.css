@@ -14,8 +14,8 @@ Text Domain: theme alek
 :root {
   --u1: 180;
   --u2: calc(var(--u1) + 20);
-  --u3: calc(var(--u2) + 20);
-  --u4: calc(var(--u3) + 20);
+  --u3: calc(var(--u2) + 150);
+  --u4: calc(var(--u3) + 30);
   --u5: calc(var(--u4) + 20);
   --s-arriere: 80%;
   --s-avant: 100%;
@@ -23,17 +23,41 @@ Text Domain: theme alek
   --l-avant: 60%;
   --couleur-arriere-entete: hsl(var(--u1), 100%, 40%);
   --couleur-arriere-acceuil: hsl(var(--u1), 100%, 35%);
-  --couleur-arriere-evenement: hsl(var(--u1), 100%, 30%);
+  --couleur-arriere-evenement: hsl(var(--u3), 100%, 30%);
   --couleur-arriere-galerie: hsl(var(--u1), 100%, 25%);
   --couleur-arriere-footer: hsl(var(--u1), 100%, 20%);
   --couleur-avant-entete: hsl(var(--u1), 100%, 15%);
   --couleur-avant-acceuil: hsl(var(--u1), 100%, 15%);
-  --couleur-avant-evenement: hsl(var(--u1), 100%, 70%);
+  --couleur-avant-evenement: hsl(var(--u3), 100%, 70%);
   --couleur-avant-galerie: hsl(var(--u1), 100%, 70%);
   --couleur-avant-footer: hsl(var(--u1), 100%, 70%);
-  --couleur-txt-titre: rgba(0, 0, 0, 0.4);
+  --couleur-txt-titre: hsl(calc(var(--u1) + 250), 100%, 40%);
   --couleur-txt: rgba(255, 255, 255, 0.8);
   --transparence-section: 0.1;
+}
+
+.entete__header {
+  background-image: url("images/wordpress-theme.png");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+
+button {
+  background-color: var(--couleur-txt-titre);
+  border: none;
+  padding: 5px;
+  border-radius: 10px 10px 10px 10px;
+  transition: transform 0.5s, background-color 0.5s;
+}
+
+button:hover {
+  transform: scale(1.3) rotate(30deg);
+  background-color: var(--couleur-arriere-footer);
+}
+
+button:focus {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
 }
 
 * {
@@ -62,8 +86,12 @@ body {
 .global > header,
 .global > footer {
   min-width: 70vw;
-  flex: 0, 1, 900px;
+  flex: 0, 1, 1100px;
   padding: 3rem 1rem;
+}
+
+.global > header {
+  flex: 1;
 }
 
 #entete,
@@ -88,7 +116,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 #entete header div {
@@ -99,20 +128,12 @@ footer {
   align-items: center;
 }
 
-#entete header div a {
-  text-decoration: none;
-  color: black;
+#entete h2 {
+  padding: 10px;
 }
 
-#entete header div h3 {
-  background-color: crimson;
-  padding: 5px;
-  border-radius: 10px 10px 10px 10px;
-  transition: transform 0.5s;
-}
-
-#entete header div h3:hover {
-  transform: scale(1.3);
+#entete h3 {
+  padding: 10px;
 }
 
 #acceuil {
@@ -184,6 +205,10 @@ h4 {
   font-size: clamp(1rem, 0.818rem + 0.455vw, 1.5rem);
   font-style: normal;
   font-weight: 300;
+}
+
+span {
+  display: block;
 }
 
 .vague {

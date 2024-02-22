@@ -24,9 +24,13 @@ body {
 .global > header,
 .global > footer {
   min-width: 70vw;
-  flex: 0, 1, 900px;
+  flex: 0, 1, 1100px;
   padding: 3rem 1rem;
   //background-color: rgba(103, 184, 255, var(--transparence-section));
+}
+
+.global > header {
+  flex: 1;
 }
 
 #entete,
@@ -51,7 +55,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 #entete header div {
@@ -62,20 +67,12 @@ footer {
   align-items: center;
 }
 
-#entete header div a {
-  text-decoration: none;
-  color: black;
+#entete h2 {
+  padding: 10px;
 }
 
-#entete header div h3 {
-  background-color: crimson;
-  padding: 5px;
-  border-radius: 10px 10px 10px 10px;
-  transition: transform 0.5s;
-}
-
-#entete header div h3:hover {
-  transform: scale(1.3);
+#entete h3 {
+  padding: 10px;
 }
 
 #acceuil {
