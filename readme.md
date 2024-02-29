@@ -7,3 +7,7 @@
     - Le code du cours
     - Le titre du cours
     - La durer du cours
+
+### Lien github page
+
+    - https://alek-crepeau.github.io/theme-wrdprs-alek/
