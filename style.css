@@ -140,7 +140,7 @@ footer {
   background-color: var(--couleur-arriere-acceuil);
   color: var(--couleur-avant-acceuil);
   position: relative;
-  padding-bottom: 5vh;
+  padding-bottom: 15vh;
 }
 
 #acceuil section {
@@ -270,4 +270,19 @@ span {
 
 .livre .shape-fill {
   fill: var(--couleur-arriere-footer);
+}
+
+.cours {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.carte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 1 20%;
+  border: 1px solid black;
 }/*# sourceMappingURL=style.css.map */
