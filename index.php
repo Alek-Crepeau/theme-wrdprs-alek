@@ -63,9 +63,15 @@
 
             if (have_posts()) :
               while (have_posts()) : the_post();
+                $titre = get_the_title();
+                $sigle = substr($titre, 0, 7);
+                $duree = substr($titre, -6, 6);
+                $titreFinale = trim(substr($titre, 7), $duree);
           ?>
                 <div class="carte">
-                  <h3><?php the_title(); ?></h3>
+                  <p><?= $sigle ?></p>
+                  <h3><?= $titreFinale ?></h3>
+                  <p><?= $duree; ?></p>
                   <p><?= wp_trim_words(get_the_content(), 30) ?></p>
                 </div>
               <?php endwhile; ?>
