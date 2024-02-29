@@ -193,6 +193,7 @@ h2 {
   font-size: clamp(0.8rem, 0.615rem + 1.385vw, 2rem);
   font-style: normal;
   font-weight: 300;
+  padding-bottom: 5vh;
 }
 
 h3 {

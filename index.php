@@ -71,8 +71,8 @@
                 <div class="carte">
                   <p><?= $sigle ?></p>
                   <h3><?= $titreFinale ?></h3>
+                  <p><?= wp_trim_words(get_the_content(), 20) ?></p>
                   <p><?= $duree; ?></p>
-                  <p><?= wp_trim_words(get_the_content(), 30) ?></p>
                 </div>
               <?php endwhile; ?>
             <?php endif; ?>
