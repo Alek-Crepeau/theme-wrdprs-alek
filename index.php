@@ -12,8 +12,13 @@
     <link rel="stylesheet" href="<?= get_template_directory_uri();?>/style.css" />
   </head>
   <body>
+    <div id="menu" class="global">
+      <header class="menu__header">
+        <?php wp_nav_menu(array("container" => "nav")); ?>
+      </header>
+    </div>
     <div id="entete" class="global">
-      <header class="entete__header">
+      <header class="hero">
         <h1>Thème wordpress de Alek (h1)</h1>
         <h2>4w4-Conception d'interface <span></span> et développement web</h2>
         <h3>TIM-Collège de maisonneuve</h3>
