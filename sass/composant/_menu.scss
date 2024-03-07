@@ -1,37 +1,97 @@
 #menu {
-  background-color: var(--couleur-arriere-evenement);
+  background-color: var(--couleur-arriere-entete);
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 700px) {
+    background-color: var(--couleur-arriere-evenement);
+  }
+}
+
+.menu__header {
+  display: flex;
+  justify-content: center;
 }
 
 .menu-principale-container {
+  position: absolute;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
   background-color: var(--couleur-arriere-evenement);
+  padding: 20px;
+  border-radius: 15px 15px 15px 15px;
+  transform: translateY(-150%);
+  transition: transform 0.5s;
 }
+
+#chk_burger {
+  display: none;
+}
+
+#chk_burger:checked ~ .menu__header .menu-principale-container {
+  transform: translateY(0);
+}
+
+#burger {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+
+  @media (min-width: 700px) {
+    display: none;
+  }
+}
+
 .menu {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  max-width: 300px;
+
+  @media (min-width: 700px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
 .menu-item {
-  flex: 0 0 100px;
   list-style-type: none;
-  background-color: var(--couleur-avant-evenement);
-  border: none;
   padding: 5px;
+  margin: 10px;
   border-radius: 10px 10px 10px 10px;
-  transition: transform 0.5s, background-color 0.5s;
+  background-color: var(--couleur-avant-evenement);
+  transition: background-color 0.5s;
+
+  @media (min-width: 700px) {
+    flex: 0 0 100px;
+    border: none;
+    padding: 5px;
+    transition: transform 0.5s;
+  }
 }
 
 .menu-item:hover {
-  transform: scale(1.3);
   background-color: var(--couleur-arriere-evenement);
+
+  @media (min-width: 700px) {
+    transform: scale(1.3);
+  }
 }
 
 .menu-item a {
-  color: var(--couleur-arriere-evenement);
   text-decoration: none;
+  color: var(--couleur-arriere-evenement);
   transition: color 0.5s;
+
+  @media (min-width: 700px) {
+  }
 }
 
 .menu-item:hover a {
   color: var(--couleur-avant-evenement);
+
+  @media (min-width: 700px) {
+  }
 }

@@ -16,7 +16,12 @@ body {
 }
 
 #menu {
-  min-height: 20vh;
+  position: relative;
+  min-height: 2vh;
+
+  @media (min-width: 700px) {
+    min-height: 20vh;
+  }
 }
 
 #acceuil,
