@@ -9,4 +9,4 @@
 
 ### Github page :
 
-    - [La page du labo 4](https://alek-crepeau.github.io/theme-wrdprs-alek/)
+#### https://alek-crepeau.github.io/theme-wrdprs-alek/
