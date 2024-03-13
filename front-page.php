@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<h1>index.html</h1>
+<h1>FRONT-PAGE.php</h1>
 <div id="entete" class="global">
   <header class="hero">
     <h1>Thème wordpress de Alek (h1)</h1>
