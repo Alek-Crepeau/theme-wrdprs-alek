@@ -37,10 +37,22 @@ Text Domain: theme alek
   --transparence-section: 0.1;
 }
 
-.hero {
+#entete {
   background-image: url("images/wordpress-theme.png");
   background-repeat: no-repeat;
   background-position: 100% 50%;
+  background-size: 250px;
+}
+@media (min-width: 900px) {
+  #entete {
+    background-size: 350px;
+  }
+}
+#entete .hero .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 200px;
 }
 
 button {
@@ -91,6 +103,7 @@ body {
 #acceuil,
 #galerie {
   min-height: 50vh;
+  overflow-x: hidden;
 }
 
 .global > section,
@@ -290,6 +303,10 @@ span {
   justify-content: space-evenly;
   gap: 2rem;
 }
+.cours a {
+  text-decoration: none;
+  color: var(--couleur-avant-acceuil);
+}
 
 .carte {
   display: flex;
@@ -299,6 +316,10 @@ span {
   flex: 1 0 225px;
   background-color: rgba(255, 255, 255, 0.4);
   padding: 5px;
+  transition: scale 0.5s;
+}
+.carte:hover {
+  scale: 1.1;
 }
 
 #menu {
@@ -310,6 +331,17 @@ span {
   #menu {
     background-color: var(--couleur-arriere-evenement);
   }
+}
+#menu .logo {
+  max-width: 0px;
+  max-height: 0px;
+}
+#menu .logo a img {
+  scale: 15%;
+  position: fixed;
+  z-index: 9;
+  top: -15vh;
+  left: -20vw;
 }
 
 .menu__header {
@@ -383,7 +415,7 @@ span {
     flex: 0 0 100px;
     border: none;
     margin: 20px;
-    transition: transform 0.5s;
+    transition: transform 0.5s, background-color 0.5s;
   }
 }
 

@@ -2,9 +2,11 @@
 <h1>index.html</h1>
 <div id="entete" class="global">
   <header class="hero">
-    <h1>Thème wordpress de Alek (h1)</h1>
-    <h2>4w4-Conception d'interface <span></span> et développement web</h2>
-    <h3>TIM-Collège de maisonneuve</h3>
+    <div class="info">
+      <h1><?= get_bloginfo("name"); ?></h1>
+      <h2><?= get_bloginfo("description"); ?></h2>
+      <h3>TIM-Collège de Maisonneuve</h3>
+    </div>
     <div>
       <button>Lorem</button>
       <button>Lorem</button>
@@ -60,12 +62,7 @@
   </section>
   <?php get_template_part("gabarit/livre"); ?>
 </div>
-<div id="footer" class="global">
-  <footer>
-    <h2>footer (h2)</h2>
-    <h4>Lorem, ipsum dolor.</h4>
-  </footer>
-</div>
+<?= get_footer(); ?>
 </body>
 <!-- <script>
     let root = document.documentElement;

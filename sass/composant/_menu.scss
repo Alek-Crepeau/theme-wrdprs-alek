@@ -6,6 +6,21 @@
   @media (min-width: 900px) {
     background-color: var(--couleur-arriere-evenement);
   }
+
+  .logo {
+    max-width: 0px;
+    max-height: 0px;
+
+    a {
+      img {
+        scale: 15%;
+        position: fixed;
+        z-index: 9;
+        top: -15vh;
+        left: -20vw;
+      }
+    }
+  }
 }
 
 .menu__header {
@@ -75,7 +90,7 @@
     flex: 0 0 100px;
     border: none;
     margin: 20px;
-    transition: transform 0.5s;
+    transition: transform 0.5s, background-color 0.5s;
   }
 }
 

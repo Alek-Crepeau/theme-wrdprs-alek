@@ -1,5 +1,19 @@
-.hero {
+#entete {
   background-image: url("images/wordpress-theme.png");
   background-repeat: no-repeat;
   background-position: 100% 50%;
+  background-size: 250px;
+
+  @media (min-width: 900px) {
+    background-size: 350px;
+  }
+
+  .hero {
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 200px;
+    }
+  }
 }
