@@ -19,7 +19,7 @@ body {
   position: relative;
   min-height: 2vh;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     min-height: 20vh;
   }
 }
@@ -31,7 +31,6 @@ body {
 }
 
 .global > section,
-.global > header,
 .global > footer {
   min-width: 70vw;
   flex: 0, 1, 1100px;

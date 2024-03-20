@@ -94,7 +94,7 @@ body {
   position: relative;
   min-height: 2vh;
 }
-@media (min-width: 700px) {
+@media (min-width: 900px) {
   #menu {
     min-height: 20vh;
   }
@@ -107,7 +107,6 @@ body {
 }
 
 .global > section,
-.global > header,
 .global > footer {
   min-width: 70vw;
   flex: 0, 1, 1100px;
@@ -348,11 +347,11 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px;
+  height: 70px;
 }
-@media (max-width: 900px) {
+@media (min-width: 900px) {
   .menu__header {
-    padding: 0%;
+    height: auto;
   }
 }
 
