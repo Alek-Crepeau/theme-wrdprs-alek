@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<h1>single.php</h1>
 <div id="entete" class="global">
     <header class="hero">
         <div class="info">
@@ -29,7 +28,7 @@
 
             if (have_posts()) : the_post();
             ?>
-                <div class="carte">
+                <div class="post">
                     <h3><?= the_title(); ?></h3>
                     <p><?= the_content(); ?></p>
                 </div>

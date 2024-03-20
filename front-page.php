@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<h1>FRONT-PAGE.php</h1>
 <div id="entete" class="global">
   <header class="hero">
     <div class="info">

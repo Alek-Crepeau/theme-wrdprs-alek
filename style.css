@@ -53,6 +53,7 @@ Text Domain: theme alek
   flex-direction: column;
   align-items: flex-start;
   max-width: 200px;
+  padding-left: 10px;
 }
 
 button {

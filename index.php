@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<h1>index.html</h1>
 <div id="entete" class="global">
   <header class="hero">
     <div class="info">
@@ -34,8 +33,9 @@
           $titre = get_the_title();
       ?>
           <div class="carte">
-            <h3><?= $titre ?></h3>
-            <p><?= wp_trim_words(get_the_content(), 20) ?></p>
+            <a href="<?= the_permalink(); ?>">
+              <h3><?= $titre ?></h3>
+              <p><?= wp_trim_words(get_the_content(), 20) ?></p>
           </div>
         <?php endwhile; ?>
       <?php endif; ?>
